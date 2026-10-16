@@ -1,0 +1,20 @@
+# AUC / Balanced Accuracy results at critical ADC points
+# Settings: VGG8 WAGE, cellBit=1, subArray=128, parallelRead=128, onoffratio=10
+# Generated from Colab hardware-mode inference
+
+dataset,adc_bits,accuracy_pct,balanced_accuracy_pct,auc,n_test
+cifar10,5,91.54,91.54,,10000
+cifar10,8,91.36,91.36,,10000
+cifar10,12,90.48,90.48,,10000
+pneumoniamnist,5,51.92,50.60,0.4757,624
+pneumoniamnist,8,78.53,71.37,0.9064,624
+pneumoniamnist,12,87.66,83.97,0.9577,624
+dermamnist,5,8.53,11.76,0.4726,2005
+dermamnist,8,74.66,45.85,0.8672,2005
+dermamnist,12,76.01,46.58,0.8971,2005
+bloodmnist,5,22.30,22.63,0.6160,3421
+bloodmnist,8,92.72,91.05,0.9958,3421
+bloodmnist,12,95.64,94.73,0.9974,3421
+retinamnist,5,36.25,19.29,0.4874,400
+retinamnist,8,53.25,37.31,0.6926,400
+retinamnist,12,54.75,38.00,0.7114,400

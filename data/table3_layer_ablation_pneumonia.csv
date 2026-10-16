@@ -1,0 +1,16 @@
+# Layer-wise ADC sensitivity on PneumoniaMNIST (leave-one-low ablation)
+# Protocol: one layer at 5-bit, all others at 12-bit
+# Layer order: 0 features.0, 1 features.2, 2 features.5, 3 features.7,
+#              4 features.10, 5 features.12, 6 classifier.0, 7 classifier.2
+
+config,adc_per_layer,accuracy_pct,balanced_accuracy_pct,auc
+ALL12,"12,12,12,12,12,12,12,12",87.66,83.97,0.9577
+ALL5,"5,5,5,5,5,5,5,5",51.92,50.60,0.4757
+LOW0_features.0,"5,12,12,12,12,12,12,12",87.66,83.97,0.9577
+LOW1_features.2,"12,5,12,12,12,12,12,12",77.24,69.66,0.9368
+LOW2_features.5,"12,12,5,12,12,12,12,12",77.40,69.87,0.8861
+LOW3_features.7,"12,12,12,5,12,12,12,12",68.91,58.55,0.8549
+LOW4_features.10,"12,12,12,12,5,12,12,12",75.00,66.67,0.9082
+LOW5_features.12,"12,12,12,12,12,5,12,12",65.87,54.49,0.8431
+LOW6_classifier.0,"12,12,12,12,12,12,5,12",62.50,50.00,0.3632
+LOW7_classifier.2,"12,12,12,12,12,12,12,5",87.66,83.97,0.9590

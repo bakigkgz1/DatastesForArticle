@@ -1,0 +1,21 @@
+# Cross-dataset validation of mixed-precision ADC (allocation tuned on Pneumonia only)
+# MIX_C = 5,12,12,12,12,12,12,5 (avg 10.25)
+# MIX_E = 5,8,12,12,12,12,12,5 (avg 9.75)
+
+dataset,config,avg_bits,accuracy_pct,balanced_accuracy_pct,auc
+bloodmnist,ALL5,5.00,22.30,22.63,0.6160
+bloodmnist,ALL12,12.00,95.64,94.73,0.9974
+bloodmnist,MIX_C,10.25,95.56,94.61,0.9974
+bloodmnist,MIX_E,9.75,94.88,93.69,0.9970
+dermamnist,ALL5,5.00,8.53,11.76,0.4726
+dermamnist,ALL12,12.00,76.01,46.58,0.8971
+dermamnist,MIX_C,10.25,76.26,47.28,0.9002
+dermamnist,MIX_E,9.75,76.56,46.81,0.8968
+pneumoniamnist,ALL5,5.00,51.92,50.60,0.4757
+pneumoniamnist,ALL12,12.00,87.66,83.97,0.9577
+pneumoniamnist,MIX_C,10.25,87.66,83.97,0.9590
+pneumoniamnist,MIX_E,9.75,86.54,82.31,0.9530
+retinamnist,ALL5,5.00,36.25,19.29,0.4874
+retinamnist,ALL12,12.00,54.75,38.00,0.7114
+retinamnist,MIX_C,10.25,54.00,37.42,0.7012
+retinamnist,MIX_E,9.75,56.00,38.88,0.7078

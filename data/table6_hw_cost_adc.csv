@@ -1,0 +1,14 @@
+# Hardware cost vs ADC precision (NeuroSim C++ levelOutput = 2^bits)
+# Network: VGG8, PneumoniaMNIST traces, cellBit=1, subArray=128, parallelRead=128
+# Area in mm^2 = ChipArea_um2 / 1e6
+
+config,adc_bits,levelOutput,area_mm2,energy_eff_TOPS_per_W,throughput_TOPS,compute_eff_TOPS_per_mm2,accuracy_pct,auc
+ALL5,5,32,80.06,31.5702,9.26374,0.115716,51.92,0.4757
+ALL8,8,256,134.91,3.22356,2.99252,0.0221819,78.53,0.9064
+ALL12,12,4096,940.44,0.00238354,0.0352736,3.75075e-05,87.66,0.9577
+
+# Mixed estimates: layer-weighted combination of uniform costs
+# MIX_C layers: 2x5-bit + 6x12-bit
+# MIX_E layers: 2x5-bit + 1x8-bit + 5x12-bit
+# MIX_C,10.25,,725.35,0.00318,, ,87.66,0.9590
+# MIX_E,9.75,,624.66,0.00381,, ,86.54,0.9530

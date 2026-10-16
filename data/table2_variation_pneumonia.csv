@@ -1,0 +1,13 @@
+# PneumoniaMNIST: ADC x conductance variation (--vari)
+# Settings: VGG8 WAGE, cellBit=1, subArray=128, parallelRead=128, onoffratio=10
+# Note: --vari injects random noise each run; single-seed results have stochastic scatter
+
+dataset,adc_bits,vari,accuracy_pct,balanced_accuracy_pct,auc,n_test
+pneumoniamnist,5,0.0,51.92,50.60,0.4757,624
+pneumoniamnist,5,0.05,53.85,53.68,0.5425,624
+pneumoniamnist,5,0.1,42.95,49.74,0.4967,624
+pneumoniamnist,5,0.2,37.98,46.11,0.4586,624
+pneumoniamnist,8,0.0,78.53,71.37,0.9064,624
+pneumoniamnist,8,0.05,78.53,71.37,0.9104,624
+pneumoniamnist,8,0.1,78.37,71.15,0.9117,624
+pneumoniamnist,8,0.2,82.21,76.28,0.9298,624
